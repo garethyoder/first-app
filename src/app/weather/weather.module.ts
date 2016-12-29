@@ -18,8 +18,6 @@ export class Weather {
   forecast: DailyForecast[];
 }
 
-
-
 export interface DailyForecast {
   code: number;
   date: string;
