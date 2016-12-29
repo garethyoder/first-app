@@ -27,7 +27,18 @@
     </form>
   </nav>
 
-  <router-outlet></router-outlet>
+  <router-outlet></router-outlet><br>
+  <ul>
+    <li *ngFor="let dailyForecast of weatherForecast?.forecast">
+      {{dailyForecast.high}}
+    </li>
+  </ul>
+
+  <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Oops!  An error has occurred: <b>{{errorMessage}}</b>
+  </div>
+
   <!-- Main component for a primary marketing message or call to action -->
   <div class="jumbotron">
     <p>This example is a quick exercise to illustrate how the default responsive navbar works. It's placed within a <code>.container</code> to limit its width and will scroll with the rest of the page's content.</p>

@@ -1,7 +1,7 @@
-import {Routes, RouterModule} from "@angular/router";
-import {NgModule} from "@angular/core";
-import {Page1Component} from "./pages/page1.component";
-import {Page2Component} from "./pages/page2.component";
+import {Routes, RouterModule} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Page1Component} from './pages/page1.component';
+import {Page2Component} from './pages/page2.component';
 /**
  * Created by Gareth Yoder on 12/25/2016.
  */

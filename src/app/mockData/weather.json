@@ -1,0 +1,149 @@
+{
+  "query":{
+    "count":1,
+    "created":"2016-12-29T16:23:42Z",
+    "lang":"en-US",
+    "results":{
+      "channel":{
+        "units":{
+          "distance":"mi",
+          "pressure":"in",
+          "speed":"mph",
+          "temperature":"F"
+        },
+        "title":"Yahoo! Weather - East Earl, PA, US",
+        "link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2395515/",
+        "description":"Yahoo! Weather for East Earl, PA, US",
+        "language":"en-us",
+        "lastBuildDate":"Thu, 29 Dec 2016 11:23 AM EST",
+        "ttl":"60",
+        "location":{
+          "city":"East Earl",
+          "country":"United States",
+          "region":" PA"
+        },
+        "wind":{
+          "chill":"32",
+          "direction":"180",
+          "speed":"18"
+        },
+        "atmosphere":{
+          "humidity":"95",
+          "pressure":"986.0",
+          "rising":"0",
+          "visibility":"10.5"
+        },
+        "astronomy":{
+          "sunrise":"7:26 am",
+          "sunset":"4:47 pm"
+        },
+        "image":{
+          "title":"Yahoo! Weather",
+          "width":"142",
+          "height":"18",
+          "link":"http://weather.yahoo.com",
+          "url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+        },
+        "item":{
+          "title":"Conditions for East Earl, PA, US at 10:00 AM EST",
+          "lat":"40.109402",
+          "long":"-76.025597",
+          "link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2395515/",
+          "pubDate":"Thu, 29 Dec 2016 10:00 AM EST",
+          "condition":{
+            "code":"11",
+            "date":"Thu, 29 Dec 2016 10:00 AM EST",
+            "temp":"39",
+            "text":"Showers"
+          },
+          "forecast":[
+            {
+              "code":"5",
+              "date":"29 Dec 2016",
+              "day":"Thu",
+              "high":"42",
+              "low":"31",
+              "text":"Rain And Snow"
+            },
+            {
+              "code":"34",
+              "date":"30 Dec 2016",
+              "day":"Fri",
+              "high":"37",
+              "low":"29",
+              "text":"Mostly Sunny"
+            },
+            {
+              "code":"30",
+              "date":"31 Dec 2016",
+              "day":"Sat",
+              "high":"41",
+              "low":"25",
+              "text":"Partly Cloudy"
+            },
+            {
+              "code":"30",
+              "date":"01 Jan 2017",
+              "day":"Sun",
+              "high":"46",
+              "low":"35",
+              "text":"Partly Cloudy"
+            },
+            {
+              "code":"39",
+              "date":"02 Jan 2017",
+              "day":"Mon",
+              "high":"44",
+              "low":"35",
+              "text":"Scattered Showers"
+            },
+            {
+              "code":"12",
+              "date":"03 Jan 2017",
+              "day":"Tue",
+              "high":"54",
+              "low":"44",
+              "text":"Rain"
+            },
+            {
+              "code":"28",
+              "date":"04 Jan 2017",
+              "day":"Wed",
+              "high":"47",
+              "low":"38",
+              "text":"Mostly Cloudy"
+            },
+            {
+              "code":"30",
+              "date":"05 Jan 2017",
+              "day":"Thu",
+              "high":"38",
+              "low":"29",
+              "text":"Partly Cloudy"
+            },
+            {
+              "code":"30",
+              "date":"06 Jan 2017",
+              "day":"Fri",
+              "high":"32",
+              "low":"25",
+              "text":"Partly Cloudy"
+            },
+            {
+              "code":"30",
+              "date":"07 Jan 2017",
+              "day":"Sat",
+              "high":"31",
+              "low":"21",
+              "text":"Partly Cloudy"
+            }
+          ],
+          "description":"<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/11.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR />Showers\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Thu - Rain And Snow. High: 42Low: 31\n<BR /> Fri - Mostly Sunny. High: 37Low: 29\n<BR /> Sat - Partly Cloudy. High: 41Low: 25\n<BR /> Sun - Partly Cloudy. High: 46Low: 35\n<BR /> Mon - Scattered Showers. High: 44Low: 35\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2395515/\">Full Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)\n<BR />\n]]>",
+          "guid":{
+            "isPermaLink":"false"
+          }
+        }
+      }
+    }
+  }
+}
