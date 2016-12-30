@@ -3,15 +3,16 @@
  */
 
 import {Component, OnInit} from '@angular/core';
-import {WeatherForecastApi, Weather} from '../weather/weather.module';
+import {WeatherForecast} from '../weather/weather.module';
 import {WeatherService} from '../weather/weather.service';
 
 @Component({
   selector: 'ten-day-forecast',
   template: `
     <h2>Ten Day Forecast</h2>
-    <div *ngFor="let dailyForecast of weatherForecast?.forecast">
-      <h3>{{dailyForecast.high}}</h3><span class="text-muted">{{dailyForecast.text}}</span>
+    
+    <div *ngFor="let dailyForecast of weatherForecast?.txt_forecast?.forecastday">
+      <h3>{{dailyForecast.title}}</h3><span class="text-muted">{{dailyForecast.fcttext}}</span>
     </div>
     
     <!-- Error handling for the API service -->
@@ -23,17 +24,17 @@ import {WeatherService} from '../weather/weather.service';
 })
 
 export class TenDayForecastComponent implements OnInit {
-  weatherForecastApi: WeatherForecastApi;
-  weatherForecast: Weather;
+  weatherForecast: WeatherForecast;
   errorMessage: string;
 
   constructor( private weatherService: WeatherService) {}
 
   ngOnInit() {
-    this.weatherService.getWeather(true).subscribe(
-      result => this.weatherForecast = result.query.results.channel.item,
+    this.weatherService.getTenDayForecast().subscribe(
+      result => this.weatherForecast = result.forecast,
       error =>  this.errorMessage = <any>error,
-      () => console.log('else ' + this.weatherForecastApi.query.results.channel.item.forecast[0].high)
+      () => console.log(JSON.stringify(this.weatherForecast.txt_forecast))
     );
   }
+
 }

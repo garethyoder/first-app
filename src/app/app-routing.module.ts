@@ -6,7 +6,6 @@ import {Page2Component} from './pages/page2.component';
  * Created by Gareth Yoder on 12/25/2016.
  */
 
-
 const routes: Routes = [
   { path: '', redirectTo: '/ten-day-forecast', pathMatch: 'full'},
   { path: 'ten-day-forecast', component: TenDayForecastComponent },
