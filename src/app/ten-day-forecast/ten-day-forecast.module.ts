@@ -2,7 +2,7 @@
  * Created by Gareth Yoder on 12/25/2016.
  */
 
-export class WeatherForecastApi {
+export class TenDayForecastApi {
   response: {
     version: string;
     termsofService: string;

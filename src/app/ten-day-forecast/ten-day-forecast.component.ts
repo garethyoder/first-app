@@ -3,8 +3,8 @@
  */
 
 import {Component, OnInit} from '@angular/core';
-import {WeatherForecast} from '../weather/weather.module';
-import {WeatherService} from '../weather/weather.service';
+import {WeatherForecast} from './ten-day-forecast.module';
+import {ForecastService} from '../weather-services/forecast.service';
 
 @Component({
   selector: 'ten-day-forecast',
@@ -27,13 +27,12 @@ export class TenDayForecastComponent implements OnInit {
   weatherForecast: WeatherForecast;
   errorMessage: string;
 
-  constructor( private weatherService: WeatherService) {}
+  constructor( private weatherService: ForecastService) {}
 
   ngOnInit() {
     this.weatherService.getTenDayForecast().subscribe(
       result => this.weatherForecast = result.forecast,
       error =>  this.errorMessage = <any>error,
-      () => console.log(JSON.stringify(this.weatherForecast.txt_forecast))
     );
   }
 

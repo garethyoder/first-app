@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {AppComponent} from './app.component';
-import {TenDayForecastComponent} from './pages/ten-day-forecast.component';
-import {Page2Component} from './pages/page2.component';
+import {TenDayForecastComponent} from './ten-day-forecast/ten-day-forecast.component';
+import {Page2Component} from './hourly-forecast/hourly-forecast.component';
 import {AppRoutingModule} from './app-routing.module';
-import {WeatherService} from './weather/weather.service';
+import {ForecastService} from './weather-services/forecast.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {WeatherService} from './weather/weather.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ WeatherService ],
+  providers: [ ForecastService ],
   bootstrap: [AppComponent]
 })
 

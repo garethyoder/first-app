@@ -5,11 +5,12 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs';
-import {WeatherForecast, WeatherForecastApi} from './weather.module';
+import {TenDayForecastApi} from '../ten-day-forecast/ten-day-forecast.module';
 import 'rxjs/Rx';
+import {HourlyForecastApi} from '../hourly-forecast/hourly-forecast.module';
 
 @Injectable()
-export class WeatherService {
+export class ForecastService {
 
   private baseUrl = 'http://api.wunderground.com/api/';
   private apiKey = 'b2b8b3ed1aeb1961';
@@ -17,13 +18,19 @@ export class WeatherService {
   private weatherUrl = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(' +
     'select%20woeid%20from%20geo.places(1)%20where%20text%3D%22east%20earl%2C%20pa%22)&format=json&env=store%3A%2F%2Fdatatables.org%' +
     '2Falltableswithkeys';
-  private mockDataUrl = '/app/mockData/weather.json';
+  private mockDataUrl = '/app/mockData/ten-day-forecast-mock-data.json';
 
   constructor(private http: Http) {
   }
 
-  getTenDayForecast(mockData = false): Observable<WeatherForecastApi> {
-    return this.http.get(mockData ? this.mockDataUrl : this.generateUrlForZipCode(17519))
+  getTenDayForecast(mockData = false): Observable<TenDayForecastApi> {
+    return this.http.get(mockData ? this.mockDataUrl : this.generateTenDayForecastUrlByZipCode(17519))
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+  getHourlyForecast(mockData = false): Observable<HourlyForecastApi> {
+    return this.http.get(mockData ? this.mockDataUrl : this.generateHourlyForecastUrlByZipCode(17519))
       .map(this.extractData)
       .catch(this.handleError);
   }
@@ -48,8 +55,12 @@ export class WeatherService {
     return Observable.throw(errMsg);
   }
 
-  private generateUrlForZipCode(zipCode: number) {
+  private generateTenDayForecastUrlByZipCode(zipCode: number) {
     return this.baseUrl + this.apiKey + '/forecast10day/q/' + zipCode + '.json';
+  }
+
+  private generateHourlyForecastUrlByZipCode(zipCode: number) {
+    return this.baseUrl + this.apiKey + '/hourly/q/' + zipCode + '.json';
   }
 
 }
