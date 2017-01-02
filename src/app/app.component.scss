@@ -1,8 +1,10 @@
 $fa-font-path: "../fonts" !default;
 @import "../../node_modules/font-awesome/scss/font-awesome";
 
-$primaryFont: #333;
+$base-font: 1em;
+$font-large: $base-font * 1.5;
+$font-small: $base-font * .8;
 
-.title {
-  color: $primaryFont;
+sup {
+  top: -0.22em;
 }

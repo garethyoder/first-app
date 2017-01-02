@@ -1,0 +1,45 @@
+@import '../app.component';
+
+$weather-icon-width: 50px;
+
+.page-title {
+  display: flex;
+  align-items: flex-end;
+  .last-updated {
+    color: #999;
+    font-size: $font-small;
+    text-align: right;
+  }
+}
+
+.ten-day-forecast {
+  border-bottom: solid 1px #999;
+  padding: 1em 0;
+
+  .weekday-short {
+    font-size: $font-large;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+  .weekday-quick-glance {
+    position: relative;
+    text-align: right;
+    .high {
+      font-size: $font-large;
+    }
+    .slash {
+      position: relative;
+      top: $base-font * 0.5;
+      font-size: $font-small;
+    }
+    .low {
+      position: relative;
+      top: $base-font;
+      font-size: $font-small;
+    }
+    .probability-of-precipitation {
+      padding-right: $weather-icon-width;
+    }
+  }
+}
+

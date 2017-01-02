@@ -14,23 +14,20 @@ export class ForecastService {
 
   private baseUrl = 'http://api.wunderground.com/api/';
   private apiKey = 'b2b8b3ed1aeb1961';
-
-  private weatherUrl = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(' +
-    'select%20woeid%20from%20geo.places(1)%20where%20text%3D%22east%20earl%2C%20pa%22)&format=json&env=store%3A%2F%2Fdatatables.org%' +
-    '2Falltableswithkeys';
-  private mockDataUrl = '/app/mockData/ten-day-forecast-mock-data.json';
+  private mockDataUrlTenDayForecast = '/app/mockData/ten-day-forecast-mock-data.json';
+  private mockDataUrlHourlyForecast = '/app/mockData/ten-day-forecast-mock-data.json';
 
   constructor(private http: Http) {
   }
 
   getTenDayForecast(mockData = false): Observable<TenDayForecastApi> {
-    return this.http.get(mockData ? this.mockDataUrl : this.generateTenDayForecastUrlByZipCode(17519))
+    return this.http.get(mockData ? this.mockDataUrlTenDayForecast : this.generateTenDayForecastUrlByZipCode(17519))
       .map(this.extractData)
       .catch(this.handleError);
   }
 
   getHourlyForecast(mockData = false): Observable<HourlyForecastApi> {
-    return this.http.get(mockData ? this.mockDataUrl : this.generateHourlyForecastUrlByZipCode(17519))
+    return this.http.get(mockData ? this.mockDataUrlHourlyForecast : this.generateHourlyForecastUrlByZipCode(17519))
       .map(this.extractData)
       .catch(this.handleError);
   }
